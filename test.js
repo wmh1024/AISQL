@@ -1,0 +1,2 @@
+const str =  `<code class="language-sql">SELECT 学号, 成绩\nFROM 学生表\nWHERE 课程编号 = &#39;01&#39; AND 成绩 &gt; (\n    SELECT 成绩\n    FROM 学生表\n    WHERE 课程编号 = &#39;02&#39;\n)\n</code>`
+console.log(str.replace(/\n/g,'<br/>'))
