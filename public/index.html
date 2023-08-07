@@ -16,20 +16,38 @@
     <h1 class="text-center" style="margin-top: 10px;margin-bottom: 10px;">AISQL 生成器</h1>
     <div class="form-floating">
         <textarea class="form-control sql"
-                  style="height: 250px;margin-bottom: 20px;">CREATE TABLE `baidu_data` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rank` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `page_views` varchar(255) DEFAULT NULL,
-  `url` varchar(1000) DEFAULT NULL,
-  `time` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-)</textarea>
+                  style="height: 250px;margin-bottom: 20px;">CREATE TABLE STUDENT
+(SNO VARCHAR2(10) NOT NULL,
+SNAME VARCHAR2(10) NOT NULL,
+SSEX VARCHAR2(10) NOT NULL,
+SBIRTHDAY DATE,
+CLASS NUMBER NOT NULL);
+
+CREATE TABLE COURSE (
+CNO VARCHAR2(10) NOT NULL,
+CNAME VARCHAR2(20) NOT NULL,
+TNO VARCHAR2(20) NOT NULL);
+
+CREATE TABLE SCORE
+(SNO VARCHAR2(10) NOT NULL,
+CNO VARCHAR2(10) NOT NULL,
+DEGREE NUMBER NOT NULL);
+
+
+CREATE TABLE TEACHER
+(TNO VARCHAR2(10) NOT NULL,
+TNAME VARCHAR2(10) NOT NULL,
+TSEX VARCHAR2(10) NOT NULL,
+TBIRTHDAY DATE NOT NULL,
+PROF VARCHAR2(10),
+DEPART VARCHAR2(20) NOT NULL);
+
+</textarea>
         <label for="floatingTextarea">SQL结构</label>
     </div>
     <div class="form-floating">
         <textarea class="form-control in"
-                  style="height: 100px;margin-bottom: 20px;">帮我计算rank值总和</textarea>
+                  style="height: 100px;margin-bottom: 20px;">查询Score表中至少有5名学生选修的并以3开头的课程的平均分数。</textarea>
 
         <label for="floatingTextarea">问题描述</label>
     </div>
