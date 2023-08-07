@@ -1,9 +1,13 @@
 import {marked} from "marked"
 import axios from "axios"
 
+const submitToast = new bootstrap.Toast(document.querySelector('.submit-toast'))
+const successToast = new bootstrap.Toast(document.querySelector('.success-toast'))
 const textareain = document.querySelector('.in')
 const textareasql = document.querySelector('.sql')
 document.querySelector('.submit').addEventListener('click', () => {
+    submitToast.show()
+    document.querySelector('.out').innerHTML = '数据已提交，等待生成...'
     axios({
         url: 'https://api.openai-proxy.com/v1/chat/completions',
         method: 'post',
@@ -38,7 +42,7 @@ document.querySelector('.submit').addEventListener('click', () => {
         // } else {
         //     document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content)
         // }
+        successToast.show()
         document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content)
-
     })
 })
