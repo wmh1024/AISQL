@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AISQL</title>
+    <title>AISQL - SQL语句生成器</title>
     <style>
         code {
             color: #000 !important;
@@ -23,14 +23,19 @@
             margin-bottom: 0 !important;
         }
 
+        .copyright {
+            margin-top: 20px;
+            color: #545c6a;
+        }
     </style>
+    <link rel="shortcut icon" href=" ./icon.ico"/>
 </head>
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
 <body>
-
 <div class="container">
-    <h1 class="text-center" style="margin-top: 10px;margin-bottom: 10px;">AISQL 生成器</h1>
+    <h1 class="text-center" style="margin-top: 20px;margin-bottom: 20px;">AISQL 生成器</h1>
     <div class="form-floating">
         <textarea class="form-control sql"
                   style="height: 250px;margin-bottom: 20px;">CREATE TABLE STUDENT
@@ -77,6 +82,7 @@ DEPART VARCHAR2(20) NOT NULL);
             <p class="card-text out"></p>
         </div>
     </div>
+    <div class="text-center copyright">code by <a href="https://wmhwiki.cn">wmh</a></div>
 </div>
 <!-- toast 提示框 -->
 <div class="toast submit-toast" data-bs-delay="1500">
@@ -93,6 +99,8 @@ DEPART VARCHAR2(20) NOT NULL);
         </div>
     </div>
 </div>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+<!--<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>-->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
