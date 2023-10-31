@@ -13,7 +13,8 @@ document.querySelector('.submit').addEventListener('click', () => {
         method: 'post',
         headers: {
             "Content-Type": "application/json",
-            Authorization: 'Bearer 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'
+            /* 此处填写你的openai key */
+            Authorization: 'Bearer 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'
         },
         data: {
             model: 'gpt-3.5-turbo',
@@ -36,12 +37,6 @@ document.querySelector('.submit').addEventListener('click', () => {
                 }]
         }
     }).then(r => {
-        // document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content).match(/<\s*code[^>]*>[\s\S]*<\s*\/\s*code\s*>/g)[0].replace(/\n/g, '<br/>')
-        // if (marked(r.data.choices[0].message.content).match(/<\s*code[^>]*>[\s\S]*<\s*\/\s*code\s*>/g)[0]) {
-        //     document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content).match(/<\s*code[^>]*>[\s\S]*<\s*\/\s*code\s*>/g)[0]
-        // } else {
-        //     document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content)
-        // }
         successToast.show()
         document.querySelector('.out').innerHTML = marked(r.data.choices[0].message.content)
     })
